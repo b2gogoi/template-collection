@@ -1,0 +1,5 @@
+{
+  "name": "dynamoDb",
+  "connector": "dynamodb-loopback-connector",
+  "region": "us-east-1"
+}

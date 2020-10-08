@@ -1,0 +1,45 @@
+{
+    "extends": [
+        "react-app",
+        "airbnb",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+        "indent": ["error", 4],
+        "react/jsx-indent": [2, 4],
+        "react/jsx-indent-props": [2, 4],
+
+        "max-len": ["error", { "code": 200 }],
+        "jsx-quotes": ["error", "prefer-single"],
+        "react/no-unescaped-entities": 0,
+        "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
+        "react/destructuring-assignment": 0,
+
+        "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
+        "react/jsx-boolean-value": [2, "always"],
+        "react/jsx-one-expression-per-line": 0,
+        "import/no-unresolved": 0,
+        "import/no-extraneous-dependencies": 0,
+        "import/prefer-default-export": 0,
+        "no-underscore-dangle": 0,
+        "object-curly-newline": 0,
+
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/explicit-member-accessibility": 0
+    },
+    "overrides": [
+        {
+            "files": ["slice.ts", "slice.tsx"],
+            "rules": {
+                "no-param-reassign": 0,
+                "prefer-destructuring": 0
+            }
+        },
+        {
+            "files": ["*.test.ts", "*.test.tsx"],
+            "rules": {
+                "@typescript-eslint/no-non-null-assertion": 0
+            }
+        }
+    ]
+}
